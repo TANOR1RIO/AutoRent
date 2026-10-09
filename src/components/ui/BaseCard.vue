@@ -3,9 +3,10 @@ interface Props {
   variant?: 'default' | 'elevated' | 'outlined' | 'glass'
   padding?: 'none' | 'sm' | 'md' | 'lg'
   hover?: boolean
-  interactive?: boolean  // ← курсор pointer
+  interactive?: boolean
 }
 
+// Дефолты, чтобы не передавать всё каждый раз
 withDefaults(defineProps<Props>(), {
   variant: 'default',
   padding: 'md',
@@ -37,8 +38,6 @@ withDefaults(defineProps<Props>(), {
   background: var(--bg-surface, #ffffff);
 }
 
-/* ===== Варианты ===== */
-
 .card--default {
   border: 1px solid var(--border-color, #e2e8f0);
 }
@@ -53,15 +52,13 @@ withDefaults(defineProps<Props>(), {
   border: 2px solid var(--border-color, #e2e8f0);
 }
 
-/* Glass — стеклянный эффект */
 .card--glass {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* ===== Hover ===== */
-
+/* Поднимается при наведении, если hover включён */
 .card--hover:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
@@ -70,8 +67,6 @@ withDefaults(defineProps<Props>(), {
 .card--interactive {
   cursor: pointer;
 }
-
-/* ===== Padding ===== */
 
 .card--none { padding: 0; }
 .card--sm    { padding: 16px; }
