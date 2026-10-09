@@ -13,6 +13,7 @@ import heroCarImage from '@/assets/images/hero-car.png'
         />
       </div>
 
+      <!-- Плавающая карточка с ближайшим авто -->
       <div class="hero__floating-card">
         <div class="floating-card__header">
           <span class="floating-card__status"></span>
@@ -33,6 +34,7 @@ import heroCarImage from '@/assets/images/hero-car.png'
         </div>
       </div>
 
+      <!-- Маленький бейдж сверху -->
       <div class="hero__mini-card">
         <span class="mini-card__text">Подача за 15 мин</span>
       </div>
@@ -63,6 +65,7 @@ import heroCarImage from '@/assets/images/hero-car.png'
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Лёгкое парение, чтобы оживить сцену */
   animation: floatCar 7s ease-in-out infinite;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
   overflow: hidden;
@@ -205,26 +208,5 @@ import heroCarImage from '@/assets/images/hero-car.png'
   0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
   70% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
   100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
-}
-
-@media (max-width: 968px) {
-  .hero__visual {
-    order: -1;
-    min-height: 360px;
-  }
-
-  .hero__car-display {
-    height: 360px;
-  }
-
-  .hero__floating-card {
-    left: 20px;
-    bottom: 20px;
-  }
-
-  .hero__mini-card {
-    right: 10px;
-    top: 10px;
-  }
 }
 </style>

@@ -5,6 +5,7 @@ import HeroVisual from './HeroVisual.vue'
 
 <template>
   <section class="hero">
+    <!-- Декоративные пятна на фоне для глубины -->
     <div class="hero__deco hero__deco--circle-1"></div>
     <div class="hero__deco hero__deco--circle-2"></div>
 
@@ -18,6 +19,7 @@ import HeroVisual from './HeroVisual.vue'
 <style scoped>
 .hero {
   position: relative;
+  /* Высота экрана минус высота хедера (72px) */
   min-height: calc(100vh - 72px);
   display: flex;
   align-items: center;
@@ -70,19 +72,5 @@ import HeroVisual from './HeroVisual.vue'
   grid-template-columns: 1.1fr 0.9fr;
   gap: 80px;
   align-items: center;
-}
-
-@media (max-width: 968px) {
-  .hero__container {
-    grid-template-columns: 1fr;
-    gap: 60px;
-  }
-}
-
-@media (max-width: 640px) {
-  .hero {
-    padding: 60px 0 40px;
-    min-height: auto;
-  }
 }
 </style>
