@@ -1,14 +1,12 @@
 <script setup lang="ts">
 import type { CarType, Transmission, CarStatus } from '@/types/car'
 
-// ✅ Правильные имена пропсов
 defineProps<{
   type: CarType | 'all'
   transmission: Transmission | 'all'
   status: CarStatus | 'all'
 }>()
 
-// ✅ Правильные имена событий
 const emit = defineEmits<{
   'update:type': [value: CarType | 'all']
   'update:transmission': [value: Transmission | 'all']
@@ -98,15 +96,5 @@ const emit = defineEmits<{
 .catalog-filters__select:focus {
   outline: none;
   border-color: #1769ff;
-}
-
-@media (max-width: 650px) {
-  .catalog-filters {
-    flex-direction: column;
-  }
-  
-  .catalog-filters__group {
-    min-width: 100%;
-  }
 }
 </style>

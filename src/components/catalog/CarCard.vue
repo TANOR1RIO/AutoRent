@@ -16,6 +16,7 @@ const handleClick = () => {
   emit('click', props.car)
 }
 
+// Маппинг для отображения типов кузова
 const typeLabels: Record<string, string> = {
   sedan: 'Седан',
   crossover: 'Кроссовер',
@@ -28,7 +29,7 @@ const typeLabels: Record<string, string> = {
   <BaseCard variant="elevated" hover class="car-card">
     <article class="car-card__inner">
 
-      <!-- Фото -->
+      <!-- Фото с бейджами статуса и расстояния -->
       <div class="car-card__image">
         <img
           :src="car.image"
@@ -50,7 +51,7 @@ const typeLabels: Record<string, string> = {
         </BaseBadge>
       </div>
 
-      <!-- Информация -->
+      <!-- Основная информация -->
       <div class="car-card__body">
         <div class="car-card__header">
           <div>
@@ -132,6 +133,7 @@ const typeLabels: Record<string, string> = {
   transition: transform 0.4s ease;
 }
 
+/* Увеличение фото при наведении на карточку */
 .car-card:hover .car-card__img {
   transform: scale(1.05);
 }

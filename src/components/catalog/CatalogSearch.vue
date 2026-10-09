@@ -11,6 +11,7 @@ const emit = defineEmits<{
 <template>
   <div class="catalog-search">
     <div class="catalog-search__wrapper">
+      <!-- Иконка поиска -->
       <svg
         class="catalog-search__icon"
         width="20"
@@ -25,6 +26,7 @@ const emit = defineEmits<{
         <circle cx="11" cy="11" r="8" />
         <line x1="21" y1="21" x2="16.65" y2="16.65" />
       </svg>
+      
       <input
         :value="modelValue"
         type="text"
